@@ -1,11 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Poiret+One|Roboto);
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
 
 html, body {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family:'Roboto', sans-serif;
+    font-family:'Roboto', sans-serif important!;
 }
 body {
     background-image: radial-gradient(closest-corner at 23% 58%, rgba(157, 166, 113, 0.2) 0%, rgba(38, 88, 137, 0.25) 60%, rgba(30, 82, 142, 0.33) 100%), linear-gradient(#000815 0%, #0074D9 100%);
@@ -80,11 +81,12 @@ a {
     color: white;
     opacity: 1;
 }
+
 .links li a::after {
     content: attr(data-title);
     position: absolute;
     display:block;
-    bottom: -2em;
+    bottom: -2.2em;
     white-space: nowrap;
     text-align:center;
     left:-3em;
@@ -93,6 +95,23 @@ a {
     opacity:0;
     transition:opacity 300ms ease-in-out;
 }
+
 .links li a:hover::after{
     opacity:1;
+}
+
+.popover h3.popover-title {
+    text-align: center;
+    color: rgba(0,0,0, 0.7);
+}
+.popover i.fa-plus {
+    position: relative;
+    top: -2px;
+    margin-left: 6px;
+    margin-right: 4px;
+}
+
+.popover i.fa-unlock-alt {
+    position: relative;
+    top: 2px;
 }

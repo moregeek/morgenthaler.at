@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </head>
 
   <body>
@@ -33,9 +35,23 @@
         <li><a href="https://twitter.com/morgents" data-title="Twitter" target="_blank"><i class="fa fa-twitter fa-3x"></i></a></li>
         <li><a href="http://stackexchange.com/users/905142/moregeek?tab=accounts" data-title="Stack Overflow" target="_blank"><i class="fa fa-stack-exchange fa-3x"></i></a></li>
         <li><a href="https://www.xing.com/profile/Stefan_Morgenthaler3" data-title="Xing" target="_blank"><i class="fa fa-xing fa-3x"></i></a></li>
-        <li><a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#115;&#x74;&#101;&#x66;&#97;&#x6e;&#64;&#109;&#x6f;&#x72;&#103;&#x65;&#110;&#x74;&#104;&#97;&#x6c;&#x65;&#114;&#46;&#97;&#x74;" data-title="Email" ><i class="fa fa-envelope fa-3x"></i></a></li>
+        <li class="poper" title="Email" data-content='<a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#115;&#x74;&#101;&#x66;&#97;&#x6e;&#64;&#109;&#x6f;&#x72;&#103;&#x65;&#110;&#x74;&#104;&#97;&#x6c;&#x65;&#114;&#46;&#97;&#x74;" data-title="Email" ><i class="fa fa-envelope fa-2x"></i></a><i class="fa fa-plus"></i> <a href="data/key.asc" target="_blank"><i class="fa fa-unlock-alt fa-2x"></i>'>
+          <a href="#" data-title="Email" id="email"><i class="fa fa-envelope fa-3x"></i></a>
+        </li>
       </ul>
     </section>
+
+    <script>
+      $( document ).ready(function() {
+        $("li.poper").popover({
+          placement: 'bottom',
+          html: true,
+          trigger: 'manual'
+        }).click(function() {
+          $(this).popover('toggle')
+        });
+      });
+    </script>
 
     <!-- Google Analytics - TODO: replace with piwik -->
     <script>
